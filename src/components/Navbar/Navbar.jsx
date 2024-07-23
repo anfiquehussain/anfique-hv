@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav>
-      <ul className="text-light mx-auto flex cursor-pointer justify-center space-x-2 py-5 font-sans">
+    <nav className="bg-transparent">
+      <ul className="text-light mx-auto flex cursor-pointer justify-center space-x-2 py-5 font-sans ">
         <li>
           <Link to="/">HOME</Link>
         </li>
