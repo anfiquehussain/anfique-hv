@@ -12,6 +12,9 @@ export default {
       dropShadow: {
         "c-drop": ["0 35px 35px #0D1117", "0 15px 100px #161B22"],
       },
+      width: {
+        '35rem': '35rem',
+      },
     },
   },
   plugins: [],
