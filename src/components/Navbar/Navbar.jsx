@@ -11,9 +11,10 @@ function Navbar() {
         <li>
           <Link to="/about">ABOUT</Link>
         </li>
-        <li>
+        {/* not in use now */}
+        {/* <li>
           <Link to="/projects">PROJECTS</Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/contact">CONTACT</Link>
         </li>

@@ -15,6 +15,9 @@ export default {
       width: {
         '35rem': '35rem',
       },
+      height: {
+        '35rem': '35rem',
+      },
     },
   },
   plugins: [],
