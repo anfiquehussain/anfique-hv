@@ -73,7 +73,7 @@ function About() {
 
       <div className="container mt-20">
         <h1 className="text-center text-5xl">MY SKILLS</h1>
-        <div className="m-5 grid grid-cols-3 gap-4 text-4xl uppercase text-light md:mt-5 md:grid-cols-4 md:text-3xl lg:grid-cols-6">
+        <div className="m-5 grid grid-cols-2 gap-4 text-4xl uppercase text-light md:mt-5 md:grid-cols-4 md:text-3xl lg:grid-cols-6">
           {/* Frontend */}
           <SkillIcon Icon={AiOutlineHtml5} name="HTML" />
           <SkillIcon Icon={FaCss3Alt} name="CSS" />
