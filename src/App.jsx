@@ -9,7 +9,7 @@ import Contact from "./Pages/Contact/Contact";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-primary min-h-screen text-white">
+      <div className="bg-primary text-white">
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
