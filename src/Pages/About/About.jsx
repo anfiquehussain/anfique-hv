@@ -27,26 +27,29 @@ function SkillIcon({ Icon, name }) {
 }
 
 function About() {
-  const [skills, setskills] = useState('I am a software developer with a passion for creating innovative anduser - friendly applications.')
+  const [skills, setskills] = useState('I am a software developer with a passion for creating innovative and user-friendly applications.')
+
   return (
     <div className="my-5 flex w-full flex-col items-center justify-start">
-      <p className="text-2xl font-light text-light">I AM</p>
-      <h1 className="my-2 text-3xl font-extrabold drop-shadow-c-drop md:my-6 md:text-6xl">
-        ANFIQUE HUSSAIN V
-      </h1>
-      <p className="mx-5 text-center text-lg font-light text-light">
-        <Typewriter
-          options={{
-            strings: skills,
-            autoStart: true,
-            loop: false,
-            delay: 40,
-          }}
-        />
-      </p>
+      <header className="text-center">
+        <p className="text-2xl font-light text-light">I AM</p>
+        <h1 className="my-2 text-3xl font-extrabold drop-shadow-c-drop md:my-6 md:text-6xl">
+          ANFIQUE HUSSAIN V
+        </h1>
+        <p className="mx-5 text-center text-lg font-light text-light">
+          <Typewriter
+            options={{
+              strings: skills,
+              autoStart: true,
+              loop: false,
+              delay: 40,
+            }}
+          />
+        </p>
+      </header>
       <br />
 
-      <div className="grid p-4 md:mt-44 md:grid-cols-2">
+      <section className="grid p-4 md:mt-44 md:grid-cols-2">
         <h1 className="text-center text-8xl text-white md:text-start block mb-5 md:hidden">
           ABOUT
         </h1>
@@ -55,7 +58,7 @@ function About() {
           alt="Profile picture"
           className="h-96 w-96 justify-self-center rounded-lg border object-cover"
         />
-        <p className="mx-5 md:mt-0 mt-5 self-end justify-self-start text-justify text-lg font-light text-light md:me-10 md:self-start">
+        <article className="mx-5 md:mt-0 mt-5 self-end justify-self-start text-justify text-lg font-light text-light md:me-10 md:self-start">
           <h1 className="text-center text-8xl text-white md:text-start hidden md:block">
             ABOUT
           </h1>
@@ -68,10 +71,10 @@ function About() {
           incorporate into my projects. I am passionate about continuously
           improving my skills and contributing meaningfully to the tech
           industry.
-        </p>
-      </div>
+        </article>
+      </section>
 
-      <div className="container mt-20">
+      <section className="container mt-20">
         <h1 className="text-center text-5xl">MY SKILLS</h1>
         <div className="m-5 grid grid-cols-2 gap-4 text-4xl uppercase text-light md:mt-5 md:grid-cols-4 md:text-3xl lg:grid-cols-6">
           {/* Frontend */}
@@ -96,7 +99,7 @@ function About() {
           <SkillIcon Icon={AiFillGithub} name="GitHub" />
           <SkillIcon Icon={MdDesignServices} name="UI/UX" />
         </div>
-      </div>
+      </section>
     </div>
   );
 }
