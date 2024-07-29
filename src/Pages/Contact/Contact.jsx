@@ -53,7 +53,6 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
-      // Replace these with your actual EmailJS service ID, template ID, and user ID
       const result = await emailjs.send(
         'service_yyzt3xn',
         'template_h7hfd8a',
@@ -80,7 +79,7 @@ export default function Contact() {
   return (
     <div className="container mx-auto p-4">
       <section>
-        <form onSubmit={handleSubmit} className="grid gap-4 md:grid-cols-2 lg:mx-40">
+        <form onSubmit={handleSubmit} className="grid md:gap-4 md:grid-cols-2 lg:mx-40">
           <div className="col-span-1 flex flex-col justify-between md:me-10">
             <InputField
               icon={HiOutlineMail}
