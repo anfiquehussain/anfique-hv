@@ -5,7 +5,25 @@ import { IoIosContact } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaRegMessage, FaPaperPlane, FaEarthAfrica } from "react-icons/fa6";
 import { GrPowerReset } from "react-icons/gr";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookF, FaInstagram, FaPhoneAlt } from "react-icons/fa";
+import { PiLinkSimpleBold } from "react-icons/pi";
+import { FiGithub } from "react-icons/fi";
+import { RiTwitterXLine } from "react-icons/ri";
+import { BsStackOverflow } from "react-icons/bs";
+import { SiLeetcode } from "react-icons/si";
+
+const SocialLink = ({ icon: Icon, name, href }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center text-light hover:text-white justify-center gap-2 rounded-lg bg-secondary px-4 py-2 text-sm hover:bg-backgroundHover"
+  >
+    <Icon />
+    <span>{name}</span>
+  </a>
+)
+
 
 const InputField = ({
   icon: Icon,
@@ -178,47 +196,61 @@ export default function Contact() {
         )}
       </section>
 
-      <section>
-        <div className="grid md:grid-cols-2 mt-10 md:mt-0 md:gap-4 lg:mx-40">
+      <section className="mt-10">
+        <div className="grid gap-8 md:grid-cols-2 lg:gap-12 lg:mx-40">
           <div>
-            <div className="relative text-white gap-2 text-3xl md:text-xl flex items-center md:mb-0 mb-3">
-            <IoLocationOutline /><h1>Address</h1> 
+            <div className="mb-4 flex items-center gap-2 text-2xl text-white md:text-xl">
+              <IoLocationOutline />
+              <h2>Address</h2>
             </div>
-            <address className="text-light my-2 md:text-sm font-mono text-base">
+            <address className="mb-6 font-mono text-base text-light md:text-sm">
               Veyattummal <br />
               Vattapparapoyil <br />
               Narikkuni(PO),673585 <br />
               Kozhikode,Kerala <br />
               INDIA <br />
             </address>
-            <div className="relative text-white gap-2 text-3xl md:text-xl flex items-center md:mb-0 mb-3">
-              <FaPhoneAlt /><h1>Phone</h1>
+
+            <div className="mb-4 flex items-center gap-2 text-2xl text-white md:text-xl">
+              <FaPhoneAlt />
+              <h2>Phone</h2>
             </div>
-            <p className="text-light my-2 md:text-sm font-mono text-base">
+            <p className="mb-6 font-mono text-base text-light md:text-sm">
               +91 9995424875
             </p>
 
-            <div className="relative text-white gap-2 text-3xl md:text-xl flex items-center md:mb-0 mb-3">
-              <IoLocationOutline /><h1>Email</h1>
+            <div className="mb-4 flex items-center gap-2 text-2xl text-white md:text-xl">
+              <HiOutlineMail />
+              <h2>Email</h2>
             </div>
-            <a href="mailto:anfiquehussain6@gmail.com" className="text-light my-2 md:text-sm font-mono text-base"> 
+            <a href="mailto:anfiquehussain6@gmail.com" className="block font-mono text-base text-light md:text-sm">
               anfiquehussain6@gmail.com
             </a>
-            <br />
-            <a href="mailto:adomax2003@gmail.com" className="text-light my-2 md:text-sm font-mono text-base">
+            <a href="mailto:adomax2003@gmail.com" className="block font-mono text-base text-light md:text-sm">
               adomax2003@gmail.com
             </a>
-
-
           </div>
 
           <div>
-            
+            <div className="mb-6 flex items-center gap-2 text-2xl text-white md:text-xl">
+              <PiLinkSimpleBold />
+              <h2>Social Links</h2>
+            </div>
+            <div className="grid gap-4 grid-cols-2 xl:grid-cols-3">
+              <SocialLink icon={FaLinkedinIn} name="LinkedIn" href="https://www.linkedin.com/in/anfiquehv" />
+              <SocialLink icon={FiGithub} name="GitHub" href="https://github.com/anfiquehussain" />
+              <SocialLink icon={RiTwitterXLine} name="X" href="https://twitter.com/anfiquehv" />
+              <SocialLink icon={BsStackOverflow} name="Stack OF" href="https://stackoverflow.com/users/16822116/anfique-hussain-v" />
+              <SocialLink icon={SiLeetcode} name="Leetcode" href="https://leetcode.com/u/Anfiquehussainv/" />
+              <SocialLink icon={FaInstagram} name="Instagram" href="https://www.instagram.com/anfique_hv/" />
+              <SocialLink icon={FaFacebookF} name="Facebook" href="https://m.facebook.com/people/Anfique-Hussain-V/100022489001636/" />
+
+            </div>
           </div>
-
-
         </div>
       </section>
     </div>
   );
+
+  
 }
