@@ -16,18 +16,13 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
-
-function SkillIcon({ Icon, name }) {
-  return (
-    <div className="hover:bg-backgroundHover flex cursor-pointer flex-col items-center justify-center rounded-lg bg-secondary p-4 hover:text-white">
-      <Icon className="mb-2 text-5xl" />
-      <p className="text-lg">{name}</p>
-    </div>
-  );
-}
+import { Link } from "react-router-dom";
+import SkillIcon from "../../components/SkillIcon/SkillIcon";
 
 function About() {
-  const [skills, setskills] = useState('I am a software developer with a passion for creating innovative and user-friendly applications.')
+  const [skills, setskills] = useState(
+    "Welcome! Here, you can learn more about me, what I do, and my skills in programming and technology.",
+  );
 
   return (
     <div className="my-5 flex w-full flex-col items-center justify-start">
@@ -50,7 +45,7 @@ function About() {
       <br />
 
       <section className="grid p-4 md:mt-44 md:grid-cols-2">
-        <h1 className="text-center text-8xl text-white md:text-start block mb-5 md:hidden">
+        <h1 className="mb-5 block text-center text-8xl text-white md:hidden md:text-start">
           ABOUT
         </h1>
         <img
@@ -58,8 +53,8 @@ function About() {
           alt="Profile picture"
           className="h-96 w-96 justify-self-center rounded-lg border object-cover"
         />
-        <article className="mx-5 md:mt-0 mt-5 self-end justify-self-start text-justify text-lg font-light text-light md:me-10 md:self-start">
-          <h1 className="text-center text-8xl text-white md:text-start hidden md:block">
+        <article className="mx-5 mt-5 self-end justify-self-start text-justify text-lg font-light text-light md:me-10 md:mt-0 md:self-start">
+          <h1 className="hidden text-center text-8xl text-white md:block md:text-start">
             ABOUT
           </h1>
           I am Anfique Hussain, a dedicated Software Developer with a diploma in
@@ -71,12 +66,23 @@ function About() {
           incorporate into my projects. I am passionate about continuously
           improving my skills and contributing meaningfully to the tech
           industry.
+          <br />
+          <br />
+          <span className="font-semibold text-light">
+            - to contact me{" "}
+            <Link
+              to="/contact"
+              className="rounded-lg bg-secondary px-2 py-1 hover:bg-backgroundHover hover:text-white"
+            >
+              CONTACT
+            </Link>
+          </span>
         </article>
       </section>
 
       <section className="container mt-20">
         <h1 className="text-center text-5xl">MY SKILLS</h1>
-        <div className="m-5 grid grid-cols-2 gap-4 text-4xl uppercase text-light md:mt-5 md:grid-cols-4 md:text-3xl lg:grid-cols-6">
+        <div className="m-5 grid grid-cols-2 gap-4 text-4xl uppercase text-light sm:grid-cols-3 md:mt-5 md:grid-cols-4 md:text-3xl lg:grid-cols-6">
           {/* Frontend */}
           <SkillIcon Icon={AiOutlineHtml5} name="HTML" />
           <SkillIcon Icon={FaCss3Alt} name="CSS" />
