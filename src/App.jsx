@@ -16,6 +16,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <span className="flex justify-end px-5 py-2 font-mono text-xs text-light">
+          v(β v1)
+        </span>
       </div>
     </BrowserRouter>
   );

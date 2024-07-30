@@ -4,7 +4,7 @@ import { IoMdDownload } from "react-icons/io";
 
 function Landing() {
   const [skills] = useState(
-    "I am a passionate Software Developer from India. I specialize in both frontend and backend development, with expertise in Django and React.js. I love transforming complex problems into elegant, user-friendly solutions."
+    "I am a passionate Software Developer from India. I specialize in both frontend and backend development, with expertise in Django and React.js. I love transforming complex problems into elegant, user-friendly solutions.",
   );
 
   return (
