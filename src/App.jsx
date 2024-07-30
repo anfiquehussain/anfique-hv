@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./Pages/About/About";
@@ -9,14 +9,14 @@ import Contact from "./Pages/Contact/Contact";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-primary text-white">
+      <div className="relative min-h-screen bg-primary text-white">
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <span className="flex justify-end px-5 py-2 font-mono text-xs text-light">
+        <span className="opacity-4 absolute bottom-0 right-0 m-4 font-mono text-xs text-gray-700">
           v(β v1)
         </span>
       </div>
