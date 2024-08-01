@@ -153,7 +153,12 @@ export default function Contact() {
           </div>
         </form>
         {submitStatus === "success" && (
-          <p className="mt-4 text-green-500">Email sent successfully!</p>
+          <p className="mt-4 text-green-500">
+            <div className="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+              <span className="font-medium">Info alert!</span> Change a few things up and try submitting again.
+            </div>
+            </p>
+
         )}
         {submitStatus === "error" && (
           <p className="mt-4 text-red-500">
