@@ -72,7 +72,7 @@ function About() {
             - to contact me{" "}
             <Link
               to="/contact"
-              className="rounded-lg bg-secondary px-2 py-1 hover:bg-backgroundHover hover:text-white"
+              className="ms-2 rounded-lg bg-secondary px-4 py-1 hover:bg-backgroundHover hover:text-white"
             >
               CONTACT
             </Link>

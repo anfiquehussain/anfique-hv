@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 
 // Icons imports
@@ -18,6 +18,7 @@ import { FiGithub } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { BsStackOverflow } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 //Components import
 import SocialLink from "../../components/SocialLink/SocialLink";
@@ -37,6 +38,10 @@ export default function Contact() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmitClose = () => {
+    setSubmitStatus(null);
   };
 
   const handleSubmit = async (e) => {
@@ -80,6 +85,30 @@ export default function Contact() {
 
   return (
     <div className="container mx-auto p-4">
+      <section className="mt-4">
+        <div className="fixed right-4 top-4 z-50 max-w-sm">
+          {submitStatus === "success" && (
+            <div className="flex items-center justify-between rounded border border-green-400 bg-green-100 px-4 py-3 text-green-700 shadow-lg transition-all duration-300 ease-in-out">
+              <p className="font-medium">Massage sent successfully</p>
+              <IoIosCloseCircleOutline
+                onClick={handleSubmitClose}
+                className="ms-1 mt-1 cursor-pointer text-xl text-green-700"
+              />
+            </div>
+          )}
+          {submitStatus === "error" && (
+            <div className="flex items-center justify-between rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700 shadow-lg transition-all duration-300 ease-in-out">
+              <p className="font-medium">
+                Error sending Massage. Please try again.
+              </p>
+              <IoIosCloseCircleOutline
+                onClick={handleSubmitClose}
+                className="ms-1 mt-1 cursor-pointer text-xl text-red-700"
+              />
+            </div>
+          )}
+        </div>
+      </section>
       <section>
         <form
           onSubmit={handleSubmit}
@@ -152,19 +181,6 @@ export default function Contact() {
             </div>
           </div>
         </form>
-        {submitStatus === "success" && (
-          <p className="mt-4 text-green-500">
-            <div className="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-              <span className="font-medium">Info alert!</span> Change a few things up and try submitting again.
-            </div>
-            </p>
-
-        )}
-        {submitStatus === "error" && (
-          <p className="mt-4 text-red-500">
-            Error sending email. Please try again.
-          </p>
-        )}
       </section>
 
       <section className="mt-10">
