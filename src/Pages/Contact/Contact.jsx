@@ -135,7 +135,6 @@ export default function Contact() {
               icon={FaEarthAfrica}
               type="text"
               name="user_location"
-              placeholder="Location/Country"
               value={Data.user_location}
               onChange={handleInputChange}
             />
