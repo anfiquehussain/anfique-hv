@@ -2,18 +2,20 @@ import React, { useState } from 'react';
 
 function Versions() {
   const [Version, setVersion] = useState([
+    { version: 'v1.1', date: '10-08-2024 : 12:41 PM' },
     { version: 'v1.0', date: '08-08-2024 : 08:03 PM' }
   ]);
   const [betaVersion, setBetaVersion] = useState([
-    { version: 'bv1.5', date: 'Aug 3, 2024' },
-    { version: 'bv1.0', date: 'Jul 30, 2024' },
+    { version: 'βv1.5', date: 'Aug 3, 2024' },
+    { version: 'βv1.0', date: 'Jul 30, 2024' },
   ]);
 
   const [oldVersions, setOldVersions] = useState([
-    { version: 'v11', dateTime: '03-08-2024 : 06:10PM' },
-    { version: 'v10', dateTime: '01-07-2024 : 04:40PM' },
-    { version: 'v9', dateTime: '06-05-2023 : 04:41PM' },
-    { version: 'v8', dateTime: '12-11-2022 : 11:30AM' },
+    { version: 'v12', dateTime: '10-08-2024 : 12:30 PM' },
+    { version: 'v11', dateTime: '03-08-2024 : 06:10 PM' },
+    { version: 'v10', dateTime: '01-07-2024 : 04:40 PM' },
+    { version: 'v9', dateTime: '06-05-2023 : 04:41 PM' },
+    { version: 'v8', dateTime: '12-11-2022 : 11:30 AM' },
   ]);
 
   return (
