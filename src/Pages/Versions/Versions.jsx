@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function Versions() {
   const [Version, setVersion] = useState([
+    { version: 'v1.5', date: '13-08-2024 : 8:37 PM' },
     { version: 'v1.2', date: '10-08-2024 : 12:49 PM' },
     { version: 'v1.1', date: '10-08-2024 : 12:41 PM' },
     { version: 'v1.0', date: '08-08-2024 : 08:03 PM' }
@@ -20,8 +21,7 @@ function Versions() {
   ]);
 
   return (
-    <div className='flex flex-col items-center w-screen'>
-
+    <div className='flex flex-col items-center mx-5 text-center'>
       {/* Table for Versions Release */}
       <div className='mb-10 w-full max-w-md'>
         <table className="table-auto border-collapse border border-gray-400 w-full">

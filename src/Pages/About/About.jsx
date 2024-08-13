@@ -18,6 +18,8 @@ import {
 import { TbApi } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import SkillIcon from "../../components/SkillIcon/SkillIcon";
+import { IoMdDownload } from "react-icons/io";
+
 
 function About() {
   const [skills, setskills] = useState(
@@ -69,13 +71,13 @@ function About() {
           <br />
           <br />
           <span className="font-semibold text-light">
-            - to contact me{" "}
-            <Link
-              to="/contact"
-              className="ms-2 rounded-lg bg-secondary px-4 py-1 hover:bg-backgroundHover hover:text-white"
-            >
-              CONTACT
-            </Link>
+            - to learn more about me
+            <a href="Resume/resume.pdf" download="Anfique_Hussain_Resume.pdf">
+              <button className="inline-flex items-center rounded bg-gray-300 ms-3 px-2 py-1 text-sm font-bold text-gray-800 hover:bg-gray-400">
+                <IoMdDownload />
+                <span className="ms-2">RESUME</span>
+              </button>
+            </a>
           </span>
         </article>
       </section>
