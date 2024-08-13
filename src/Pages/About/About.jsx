@@ -70,10 +70,10 @@ function About() {
           industry.
           <br />
           <br />
-          <span className="font-semibold text-light">
+          <span className="flex flex-wrap text-xs sm:text-lg items-center font-semibold text-light">
             - to learn more about me
             <a href="Resume/resume.pdf" download="Anfique_Hussain_Resume.pdf">
-              <button className="inline-flex items-center rounded bg-gray-300 ms-3 px-2 py-1 text-sm font-bold text-gray-800 hover:bg-gray-400">
+              <button className="inline-flex items-center rounded bg-gray-300 ms-3 px-2 py-1 text-xs font-bold text-gray-800 hover:bg-gray-400">
                 <IoMdDownload />
                 <span className="ms-2">RESUME</span>
               </button>
