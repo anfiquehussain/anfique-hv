@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 function Versions() {
   const [Version, setVersion] = useState([
-    { version: 'v1.7', date: '29-08-2024 : 6:02 PM' },
-    { version: 'v1.6', date: '13-08-2024 : 8:57 PM' },
-    { version: 'v1.5', date: '13-08-2024 : 8:37 PM' },
+    { version: 'v1.5', date: '29-08-2024 : 6:05 PM' },
+    { version: 'v1.4', date: '13-08-2024 : 8:57 PM' },
+    { version: 'v1.3', date: '13-08-2024 : 8:37 PM' },
     { version: 'v1.2', date: '10-08-2024 : 12:49 PM' },
     { version: 'v1.1', date: '10-08-2024 : 12:41 PM' },
     { version: 'v1.0', date: '08-08-2024 : 08:03 PM' }
