@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function Versions() {
   const [Version, setVersion] = useState([
+    { version: 'v1.7', date: '29-08-2024 : 6:02 PM' },
     { version: 'v1.6', date: '13-08-2024 : 8:57 PM' },
     { version: 'v1.5', date: '13-08-2024 : 8:37 PM' },
     { version: 'v1.2', date: '10-08-2024 : 12:49 PM' },
