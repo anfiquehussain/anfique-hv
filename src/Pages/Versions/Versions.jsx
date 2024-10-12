@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 
 function Versions() {
-  const [Version, setVersion] = useState([
+
+  const [Version2, setVersion2] = useState([
+    { version: 'v2.0', date: '12-10-2024 : 8:15 PM' },
+  ]);
+
+  const [Version1, setVersion1] = useState([
     { version: 'v1.5', date: '29-08-2024 : 6:05 PM' },
     { version: 'v1.4', date: '13-08-2024 : 8:57 PM' },
     { version: 'v1.3', date: '13-08-2024 : 8:37 PM' },
@@ -24,23 +29,51 @@ function Versions() {
 
   return (
     <div className='flex flex-col items-center mx-5 text-center'>
+
       {/* Table for Versions Release */}
       <div className='mb-10 w-full max-w-md'>
         <table className="table-auto border-collapse border border-gray-400 w-full">
           <thead>
             <tr>
               <th className='border border-gray-300 px-4 py-2' colSpan={3}>
-                <a href="https://github.com/anfiquehussain/anfique-hv" target="_blank" rel="noopener noreferrer">
-                  Versions Release
+                <a target="_blank" rel="noopener noreferrer">
+                  Versions 2 Release
                 </a>
-                <a href="https://github.com/anfiquehussain/beta.anfique-hv" target="_blank" rel="noopener noreferrer" className='ms-3'>
+                <a href="https://github.com/anfiquehussain/anfique-hv" target="_blank" rel="noopener noreferrer" className='ms-3'>
                   (GitHub)
                 </a>
               </th>
             </tr>
           </thead>
           <tbody>
-            {Version.map((item, index) => (
+            {Version2.map((item, index) => (
+              <tr key={index}>
+                <td className='border border-gray-300 px-4 py-2'>{index + 1}</td>
+                <td className='border border-gray-300 px-4 py-2'>{item.version}</td>
+                <td className='border border-gray-300 px-4 py-2'>{item.date}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Table for Versions 1 Release */}
+      <div className='mb-10 w-full max-w-md'>
+        <table className="table-auto border-collapse border border-gray-400 w-full">
+          <thead>
+            <tr>
+              <th className='border border-gray-300 px-4 py-2' colSpan={3}>
+                <a  target="_blank" rel="noopener noreferrer">
+                  Versions 1 Release
+                </a>
+                <a href="https://github.com/anfiquehussain/anfique-hv/tree/ec243d3d62c1bcdcd115428646332bfc7468b237" target="_blank" rel="noopener noreferrer" className='ms-3'>
+                  (GitHub)
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {Version1.map((item, index) => (
               <tr key={index}>
                 <td className='border border-gray-300 px-4 py-2'>{index + 1}</td>
                 <td className='border border-gray-300 px-4 py-2'>{item.version}</td>
