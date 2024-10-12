@@ -7,7 +7,8 @@ import Landing from "./Pages/Landing/Landing";
 import Contact from "./Pages/Contact/Contact";
 import Versions from "./Pages/Versions/Versions";
 import AnimatedCursor from "react-animated-cursor";
-import Blogs from "./Pages/Blogs/Blogs";
+import BlogsContent from "./Pages/Blogs/BlogsContent";
+import BlogsHome from "./Pages/Blogs/BlogsHome";
 
 function App() {
   return (
@@ -46,14 +47,15 @@ function App() {
       />
       <div className="bg-primary text-white">
         <span className="opacity-4 fixed bottom-0 right-0 m-4 font-mono text-xs text-gray-700">
-          <Link to="/v">v2.0.0</Link>
+          <Link to="/v">v2.1.0</Link>
         </span>
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs" element={<BlogsHome />} />
+          <Route path="/blogs-content" element={<BlogsContent />} />
           <Route path="/v" element={<Versions />} />
         </Routes>
       </div>
