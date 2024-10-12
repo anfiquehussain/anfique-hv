@@ -7,7 +7,7 @@ import Landing from "./Pages/Landing/Landing";
 import Contact from "./Pages/Contact/Contact";
 import Versions from "./Pages/Versions/Versions";
 import AnimatedCursor from "react-animated-cursor";
-import Blogs from "./Pages/blogs/blogs";
+import Blogs from "./Pages/Blogs/Blogs";
 
 function App() {
   return (
