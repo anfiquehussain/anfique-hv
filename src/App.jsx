@@ -47,7 +47,7 @@ function App() {
       />
       <div className="bg-primary text-white">
         <span className="opacity-4 fixed bottom-0 right-0 m-4 font-mono text-xs text-gray-700">
-          <Link to="/v">v2.2.0</Link>
+          <Link to="/v">v2.3.0</Link>
         </span>
         <Navbar />
         <Routes>
